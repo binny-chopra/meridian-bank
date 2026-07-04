@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.badge--active {
+  background: #e3f6e8;
+  color: #1a7f3c;
+}
+
+.badge--pending {
+  background: #fff4de;
+  color: #9a6400;
+}
+
+.badge--closed {
+  background: #f1f2f4;
+  color: #57606a;
+}

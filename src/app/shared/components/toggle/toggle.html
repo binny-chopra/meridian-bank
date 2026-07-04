@@ -1,0 +1,12 @@
+<button
+  type="button"
+  class="toggle"
+  role="switch"
+  [attr.aria-checked]="checked()"
+  (click)="onToggle()"
+>
+  <span class="toggle__track" [class.is-on]="checked()">
+    <span class="toggle__thumb"></span>
+  </span>
+  <span class="toggle__label">{{ label() }}</span>
+</button>

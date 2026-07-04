@@ -1,0 +1,8 @@
+<span class="badge" [class]="'badge--' + status()" role="status">
+  @switch (status()) {
+    @case ('active') { Active }
+    @case ('pending') { Pending }
+    @case ('closed') { Closed }
+    @default { Unknown }
+  }
+</span>
