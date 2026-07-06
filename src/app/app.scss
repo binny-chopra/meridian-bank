@@ -1,4 +1,4 @@
-.ui-kit-demo {
+.shell {
   max-width: 480px;
   margin: 2rem auto;
   padding: 0 1rem;
@@ -6,19 +6,28 @@
 }
 
 h1 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
-[card-header] {
+nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-[card-footer] {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e5eb;
+  padding-bottom: 0.75rem;
+
+  a {
+    color: #57606a;
+    text-decoration: none;
+    font-weight: 600;
+
+    &.is-active {
+      color: #0b5fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #0b5fff;
+      outline-offset: 2px;
+    }
+  }
 }

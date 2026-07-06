@@ -1,0 +1,113 @@
+<section aria-labelledby="watchlist-search-heading">
+  <h3 id="watchlist-search-heading">Add to Watchlist</h3>
+
+  <div class="combobox" #combobox>
+    <input
+      #searchInput
+      type="text"
+      role="combobox"
+      aria-autocomplete="list"
+      [attr.aria-expanded]="isOpen()"
+      aria-controls="symbol-listbox"
+      [attr.aria-activedescendant]="activeOptionId()"
+      aria-label="Search for a symbol or company name"
+      placeholder="Search e.g. Apple, AAPL, Tesla…"
+      [value]="searchText()"
+      (input)="onSearchInput($any($event.target).value)"
+      (keydown)="onSearchKeydown($event)"
+      (focus)="isOpen.set(true)"
+    />
+
+    @if (isOpen() && searchResults().length > 0) {
+      <ul id="symbol-listbox" role="listbox" aria-label="Matching symbols" class="listbox">
+        @for (result of searchResults(); track result.symbol; let i = $index) {
+          <li
+            [id]="'symbol-option-' + result.symbol"
+            role="option"
+            [attr.aria-selected]="i === activeIndex()"
+            [class.is-active]="i === activeIndex()"
+            (click)="selectSymbol(result)"
+          >
+            <span class="option-symbol">{{ result.symbol }}</span>
+            <span class="option-name">{{ result.name }}</span>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</section>
+
+<section aria-labelledby="watchlist-heading">
+  <h3 id="watchlist-heading">Watchlist</h3>
+
+  @let watched = watchedHoldings();
+  @if (watched === undefined) {
+    <p role="status">Loading watchlist…</p>
+  } @else if (watched === null) {
+    <p role="alert">Could not load quotes.</p>
+  } @else if (watched.length === 0) {
+    <p>No symbols on your watchlist yet — search above to add one.</p>
+  } @else {
+    <ul class="watchlist">
+      @for (holding of watched; track holding.symbol) {
+        <li>
+          <span class="watchlist__symbol">{{ holding.symbol }}</span>
+          <span class="numeric" [class]="'trend--' + trendFor(holding.symbol, holding.price)">
+            {{ holding.price | currency }}
+          </span>
+          <app-button variant="secondary" (clicked)="watchlist.remove(holding.symbol)">
+            Remove
+          </app-button>
+        </li>
+      }
+    </ul>
+  }
+</section>
+
+<section aria-labelledby="holdings-heading">
+  <header class="holdings-header">
+    <h3 id="holdings-heading">Holdings</h3>
+    <app-button variant="secondary" (clicked)="refreshNow()">Refresh now</app-button>
+  </header>
+
+  @if (holdings() === undefined) {
+    <p role="status">Loading holdings…</p>
+  } @else if (holdings() === null) {
+    <p role="alert">Could not load holdings. Please try again.</p>
+  } @else {
+    <div class="holdings" role="table" aria-label="Holdings">
+      <div class="holdings__row holdings__row--header" role="row">
+        <span role="columnheader">Symbol</span>
+        <span role="columnheader" class="numeric">Price</span>
+        <span role="columnheader" class="numeric">Change</span>
+        <span role="columnheader" class="numeric">Market Value</span>
+        <span role="columnheader" class="numeric">Gain / Loss</span>
+        <span role="columnheader">Watch</span>
+      </div>
+
+      @for (holding of holdings(); track holding.symbol) {
+        <div class="holdings__row" role="row">
+          <span role="cell" class="holding-name">
+            <strong>{{ holding.symbol }}</strong>
+            <small>{{ holding.name }}</small>
+          </span>
+          <span role="cell" class="numeric" [class]="'trend--' + trendFor(holding.symbol, holding.price)">
+            {{ holding.price | currency }}
+          </span>
+          <span role="cell" class="numeric" [class.is-negative]="holding.changePercent < 0">
+            {{ formatChangePercent(holding.changePercent) }}
+          </span>
+          <span role="cell" class="numeric">{{ holding.marketValue | currency }}</span>
+          <span role="cell" class="numeric" [class.is-negative]="holding.gainLoss < 0">
+            {{ holding.gainLoss | currency }}
+          </span>
+          <span role="cell">
+            <app-button variant="secondary" (clicked)="watchlist.toggle(holding.symbol)">
+              {{ watchlist.isWatched(holding.symbol) ? 'Watching' : 'Watch' }}
+            </app-button>
+          </span>
+        </div>
+      }
+    </div>
+  }
+</section>

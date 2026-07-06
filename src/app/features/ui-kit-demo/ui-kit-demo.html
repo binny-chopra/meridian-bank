@@ -1,0 +1,23 @@
+<section aria-labelledby="account-card-heading">
+  <h2 id="account-card-heading">Checking Account</h2>
+
+  <app-card>
+    <span card-header>
+      <span>Account {{ '4532015112830366' | maskAccountNumber }}</span>
+      <app-badge [status]="accountStatus()" />
+    </span>
+
+    <p>Last updated {{ lastUpdated() | timeAgo }}</p>
+
+    <p *appHasRole="['advisor']; user: currentRole()">
+      Advisor-only: client risk profile is moderate.
+    </p>
+
+    <span card-footer>
+      <app-toggle label="Advisor view" [(checked)]="isAdvisorView" appAutoFocus />
+      <app-button variant="secondary" (clicked)="accountStatus.set('pending')">
+        Mark pending
+      </app-button>
+    </span>
+  </app-card>
+</section>

@@ -1,0 +1,668 @@
+[
+  {
+    "id": "acc-1001-tx-42",
+    "accountId": "acc-1001",
+    "date": "2026-07-05",
+    "description": "Shell Gas Station",
+    "category": "Transportation",
+    "amount": -123.46,
+    "balanceAfter": 8068.62
+  },
+  {
+    "id": "acc-1001-tx-41",
+    "accountId": "acc-1001",
+    "date": "2026-07-04",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -116.76,
+    "balanceAfter": 8192.08
+  },
+  {
+    "id": "acc-1001-tx-40",
+    "accountId": "acc-1001",
+    "date": "2026-07-03",
+    "description": "Shell Gas Station",
+    "category": "Transportation",
+    "amount": -203.97,
+    "balanceAfter": 8308.84
+  },
+  {
+    "id": "acc-1001-tx-39",
+    "accountId": "acc-1001",
+    "date": "2026-07-02",
+    "description": "Con Edison Electric",
+    "category": "Utilities",
+    "amount": -33.17,
+    "balanceAfter": 8512.81
+  },
+  {
+    "id": "acc-1001-tx-38",
+    "accountId": "acc-1001",
+    "date": "2026-06-30",
+    "description": "CVS Pharmacy",
+    "category": "Health",
+    "amount": -146.57,
+    "balanceAfter": 8545.98
+  },
+  {
+    "id": "acc-1001-tx-37",
+    "accountId": "acc-1001",
+    "date": "2026-06-30",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -152.3,
+    "balanceAfter": 8692.55
+  },
+  {
+    "id": "acc-1001-tx-36",
+    "accountId": "acc-1001",
+    "date": "2026-06-29",
+    "description": "Chipotle",
+    "category": "Dining",
+    "amount": -32.41,
+    "balanceAfter": 8844.85
+  },
+  {
+    "id": "acc-1001-tx-35",
+    "accountId": "acc-1001",
+    "date": "2026-06-27",
+    "description": "Shell Gas Station",
+    "category": "Transportation",
+    "amount": -214.74,
+    "balanceAfter": 8877.26
+  },
+  {
+    "id": "acc-1001-tx-34",
+    "accountId": "acc-1001",
+    "date": "2026-06-26",
+    "description": "Interest Payment",
+    "category": "Income",
+    "amount": 2559.83,
+    "balanceAfter": 9092
+  },
+  {
+    "id": "acc-1001-tx-33",
+    "accountId": "acc-1001",
+    "date": "2026-06-26",
+    "description": "Payroll Deposit",
+    "category": "Income",
+    "amount": 1850.76,
+    "balanceAfter": 6532.17
+  },
+  {
+    "id": "acc-1001-tx-32",
+    "accountId": "acc-1001",
+    "date": "2026-06-25",
+    "description": "Verizon Wireless",
+    "category": "Utilities",
+    "amount": -56.58,
+    "balanceAfter": 4681.41
+  },
+  {
+    "id": "acc-1001-tx-31",
+    "accountId": "acc-1001",
+    "date": "2026-06-24",
+    "description": "CVS Pharmacy",
+    "category": "Health",
+    "amount": -143.31,
+    "balanceAfter": 4737.99
+  },
+  {
+    "id": "acc-1001-tx-30",
+    "accountId": "acc-1001",
+    "date": "2026-06-22",
+    "description": "Amazon.com",
+    "category": "Shopping",
+    "amount": -155.06,
+    "balanceAfter": 4881.3
+  },
+  {
+    "id": "acc-1001-tx-29",
+    "accountId": "acc-1001",
+    "date": "2026-06-21",
+    "description": "CVS Pharmacy",
+    "category": "Health",
+    "amount": -100.08,
+    "balanceAfter": 5036.36
+  },
+  {
+    "id": "acc-1001-tx-28",
+    "accountId": "acc-1001",
+    "date": "2026-06-21",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "amount": -96.44,
+    "balanceAfter": 5136.44
+  },
+  {
+    "id": "acc-1001-tx-27",
+    "accountId": "acc-1001",
+    "date": "2026-06-20",
+    "description": "Verizon Wireless",
+    "category": "Utilities",
+    "amount": -88.54,
+    "balanceAfter": 5232.88
+  },
+  {
+    "id": "acc-1001-tx-26",
+    "accountId": "acc-1001",
+    "date": "2026-06-18",
+    "description": "Con Edison Electric",
+    "category": "Utilities",
+    "amount": -124.42,
+    "balanceAfter": 5321.42
+  },
+  {
+    "id": "acc-1001-tx-25",
+    "accountId": "acc-1001",
+    "date": "2026-06-18",
+    "description": "Shell Gas Station",
+    "category": "Transportation",
+    "amount": -10.71,
+    "balanceAfter": 5445.84
+  },
+  {
+    "id": "acc-1001-tx-24",
+    "accountId": "acc-1001",
+    "date": "2026-06-17",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -53.74,
+    "balanceAfter": 5456.55
+  },
+  {
+    "id": "acc-1001-tx-23",
+    "accountId": "acc-1001",
+    "date": "2026-06-16",
+    "description": "Delta Air Lines",
+    "category": "Travel",
+    "amount": -219.73,
+    "balanceAfter": 5510.29
+  },
+  {
+    "id": "acc-1001-tx-22",
+    "accountId": "acc-1001",
+    "date": "2026-06-15",
+    "description": "Shell Gas Station",
+    "category": "Transportation",
+    "amount": -64.27,
+    "balanceAfter": 5730.02
+  },
+  {
+    "id": "acc-1001-tx-21",
+    "accountId": "acc-1001",
+    "date": "2026-06-13",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -138.74,
+    "balanceAfter": 5794.29
+  },
+  {
+    "id": "acc-1001-tx-20",
+    "accountId": "acc-1001",
+    "date": "2026-06-12",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "amount": -166.29,
+    "balanceAfter": 5933.03
+  },
+  {
+    "id": "acc-1001-tx-19",
+    "accountId": "acc-1001",
+    "date": "2026-06-12",
+    "description": "Interest Payment",
+    "category": "Income",
+    "amount": 1102.28,
+    "balanceAfter": 6099.32
+  },
+  {
+    "id": "acc-1001-tx-18",
+    "accountId": "acc-1001",
+    "date": "2026-06-11",
+    "description": "Starbucks",
+    "category": "Dining",
+    "amount": -10.65,
+    "balanceAfter": 4997.04
+  },
+  {
+    "id": "acc-1001-tx-17",
+    "accountId": "acc-1001",
+    "date": "2026-06-10",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -68.78,
+    "balanceAfter": 5007.69
+  },
+  {
+    "id": "acc-1001-tx-16",
+    "accountId": "acc-1001",
+    "date": "2026-06-09",
+    "description": "Verizon Wireless",
+    "category": "Utilities",
+    "amount": -206.92,
+    "balanceAfter": 5076.47
+  },
+  {
+    "id": "acc-1001-tx-15",
+    "accountId": "acc-1001",
+    "date": "2026-06-07",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -55.6,
+    "balanceAfter": 5283.39
+  },
+  {
+    "id": "acc-1001-tx-14",
+    "accountId": "acc-1001",
+    "date": "2026-06-06",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "amount": -159.44,
+    "balanceAfter": 5338.99
+  },
+  {
+    "id": "acc-1001-tx-13",
+    "accountId": "acc-1001",
+    "date": "2026-06-05",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -132,
+    "balanceAfter": 5498.43
+  },
+  {
+    "id": "acc-1001-tx-12",
+    "accountId": "acc-1001",
+    "date": "2026-06-04",
+    "description": "CVS Pharmacy",
+    "category": "Health",
+    "amount": -64.7,
+    "balanceAfter": 5630.43
+  },
+  {
+    "id": "acc-1001-tx-11",
+    "accountId": "acc-1001",
+    "date": "2026-06-03",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -64.19,
+    "balanceAfter": 5695.13
+  },
+  {
+    "id": "acc-1001-tx-10",
+    "accountId": "acc-1001",
+    "date": "2026-06-02",
+    "description": "Shell Gas Station",
+    "category": "Transportation",
+    "amount": -79.14,
+    "balanceAfter": 5759.32
+  },
+  {
+    "id": "acc-1001-tx-9",
+    "accountId": "acc-1001",
+    "date": "2026-06-01",
+    "description": "CVS Pharmacy",
+    "category": "Health",
+    "amount": -216.9,
+    "balanceAfter": 5838.46
+  },
+  {
+    "id": "acc-1001-tx-8",
+    "accountId": "acc-1001",
+    "date": "2026-06-01",
+    "description": "Payroll Deposit",
+    "category": "Income",
+    "amount": 2603.95,
+    "balanceAfter": 6055.36
+  },
+  {
+    "id": "acc-1001-tx-7",
+    "accountId": "acc-1001",
+    "date": "2026-05-31",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -189.75,
+    "balanceAfter": 3451.41
+  },
+  {
+    "id": "acc-1001-tx-6",
+    "accountId": "acc-1001",
+    "date": "2026-05-29",
+    "description": "Netflix",
+    "category": "Entertainment",
+    "amount": -28.01,
+    "balanceAfter": 3641.16
+  },
+  {
+    "id": "acc-1001-tx-5",
+    "accountId": "acc-1001",
+    "date": "2026-05-29",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -152.7,
+    "balanceAfter": 3669.17
+  },
+  {
+    "id": "acc-1001-tx-4",
+    "accountId": "acc-1001",
+    "date": "2026-05-27",
+    "description": "Netflix",
+    "category": "Entertainment",
+    "amount": -68.22,
+    "balanceAfter": 3821.87
+  },
+  {
+    "id": "acc-1001-tx-3",
+    "accountId": "acc-1001",
+    "date": "2026-05-27",
+    "description": "Starbucks",
+    "category": "Dining",
+    "amount": -38.4,
+    "balanceAfter": 3890.09
+  },
+  {
+    "id": "acc-1001-tx-2",
+    "accountId": "acc-1001",
+    "date": "2026-05-25",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -170.68,
+    "balanceAfter": 3928.49
+  },
+  {
+    "id": "acc-1001-tx-1",
+    "accountId": "acc-1001",
+    "date": "2026-05-24",
+    "description": "Chipotle",
+    "category": "Dining",
+    "amount": -119.36,
+    "balanceAfter": 4099.17
+  },
+  {
+    "id": "acc-1002-tx-12",
+    "accountId": "acc-1002",
+    "date": "2026-07-05",
+    "description": "Netflix",
+    "category": "Entertainment",
+    "amount": -174.31,
+    "balanceAfter": 23921.34
+  },
+  {
+    "id": "acc-1002-tx-11",
+    "accountId": "acc-1002",
+    "date": "2026-07-04",
+    "description": "Netflix",
+    "category": "Entertainment",
+    "amount": -44.71,
+    "balanceAfter": 24095.65
+  },
+  {
+    "id": "acc-1002-tx-10",
+    "accountId": "acc-1002",
+    "date": "2026-07-03",
+    "description": "Interest Payment",
+    "category": "Income",
+    "amount": 925.23,
+    "balanceAfter": 24140.36
+  },
+  {
+    "id": "acc-1002-tx-9",
+    "accountId": "acc-1002",
+    "date": "2026-07-01",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "amount": -58.11,
+    "balanceAfter": 23215.13
+  },
+  {
+    "id": "acc-1002-tx-8",
+    "accountId": "acc-1002",
+    "date": "2026-06-30",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -125.16,
+    "balanceAfter": 23273.24
+  },
+  {
+    "id": "acc-1002-tx-7",
+    "accountId": "acc-1002",
+    "date": "2026-06-30",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -199.73,
+    "balanceAfter": 23398.4
+  },
+  {
+    "id": "acc-1002-tx-6",
+    "accountId": "acc-1002",
+    "date": "2026-06-29",
+    "description": "Netflix",
+    "category": "Entertainment",
+    "amount": -159.45,
+    "balanceAfter": 23598.13
+  },
+  {
+    "id": "acc-1002-tx-5",
+    "accountId": "acc-1002",
+    "date": "2026-06-27",
+    "description": "Payroll Deposit",
+    "category": "Income",
+    "amount": 2976.87,
+    "balanceAfter": 23757.58
+  },
+  {
+    "id": "acc-1002-tx-4",
+    "accountId": "acc-1002",
+    "date": "2026-06-27",
+    "description": "Netflix",
+    "category": "Entertainment",
+    "amount": -53.28,
+    "balanceAfter": 20780.71
+  },
+  {
+    "id": "acc-1002-tx-3",
+    "accountId": "acc-1002",
+    "date": "2026-06-25",
+    "description": "Starbucks",
+    "category": "Dining",
+    "amount": -106.35,
+    "balanceAfter": 20833.99
+  },
+  {
+    "id": "acc-1002-tx-2",
+    "accountId": "acc-1002",
+    "date": "2026-06-24",
+    "description": "Interest Payment",
+    "category": "Income",
+    "amount": 2024.33,
+    "balanceAfter": 20940.34
+  },
+  {
+    "id": "acc-1002-tx-1",
+    "accountId": "acc-1002",
+    "date": "2026-06-23",
+    "description": "Interest Payment",
+    "category": "Income",
+    "amount": 573.91,
+    "balanceAfter": 18916.01
+  },
+  {
+    "id": "acc-1003-tx-20",
+    "accountId": "acc-1003",
+    "date": "2026-07-04",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -37.06,
+    "balanceAfter": -2658.99
+  },
+  {
+    "id": "acc-1003-tx-19",
+    "accountId": "acc-1003",
+    "date": "2026-07-04",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -33.65,
+    "balanceAfter": -2621.93
+  },
+  {
+    "id": "acc-1003-tx-18",
+    "accountId": "acc-1003",
+    "date": "2026-07-03",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -21.77,
+    "balanceAfter": -2588.28
+  },
+  {
+    "id": "acc-1003-tx-17",
+    "accountId": "acc-1003",
+    "date": "2026-07-02",
+    "description": "Amazon.com",
+    "category": "Shopping",
+    "amount": -9.03,
+    "balanceAfter": -2566.51
+  },
+  {
+    "id": "acc-1003-tx-16",
+    "accountId": "acc-1003",
+    "date": "2026-07-01",
+    "description": "Chipotle",
+    "category": "Dining",
+    "amount": -72.6,
+    "balanceAfter": -2557.48
+  },
+  {
+    "id": "acc-1003-tx-15",
+    "accountId": "acc-1003",
+    "date": "2026-06-29",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "amount": -10.28,
+    "balanceAfter": -2484.88
+  },
+  {
+    "id": "acc-1003-tx-14",
+    "accountId": "acc-1003",
+    "date": "2026-06-28",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "amount": -190.49,
+    "balanceAfter": -2474.6
+  },
+  {
+    "id": "acc-1003-tx-13",
+    "accountId": "acc-1003",
+    "date": "2026-06-27",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -109.05,
+    "balanceAfter": -2284.11
+  },
+  {
+    "id": "acc-1003-tx-12",
+    "accountId": "acc-1003",
+    "date": "2026-06-27",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -91.71,
+    "balanceAfter": -2175.06
+  },
+  {
+    "id": "acc-1003-tx-11",
+    "accountId": "acc-1003",
+    "date": "2026-06-25",
+    "description": "Uber",
+    "category": "Transportation",
+    "amount": -188.61,
+    "balanceAfter": -2083.35
+  },
+  {
+    "id": "acc-1003-tx-10",
+    "accountId": "acc-1003",
+    "date": "2026-06-24",
+    "description": "Chipotle",
+    "category": "Dining",
+    "amount": -130.98,
+    "balanceAfter": -1894.74
+  },
+  {
+    "id": "acc-1003-tx-9",
+    "accountId": "acc-1003",
+    "date": "2026-06-23",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -21.03,
+    "balanceAfter": -1763.76
+  },
+  {
+    "id": "acc-1003-tx-8",
+    "accountId": "acc-1003",
+    "date": "2026-06-23",
+    "description": "CVS Pharmacy",
+    "category": "Health",
+    "amount": -206.26,
+    "balanceAfter": -1742.73
+  },
+  {
+    "id": "acc-1003-tx-7",
+    "accountId": "acc-1003",
+    "date": "2026-06-21",
+    "description": "Verizon Wireless",
+    "category": "Utilities",
+    "amount": -73.66,
+    "balanceAfter": -1536.47
+  },
+  {
+    "id": "acc-1003-tx-6",
+    "accountId": "acc-1003",
+    "date": "2026-06-20",
+    "description": "ATM Withdrawal",
+    "category": "Cash",
+    "amount": -163.65,
+    "balanceAfter": -1462.81
+  },
+  {
+    "id": "acc-1003-tx-5",
+    "accountId": "acc-1003",
+    "date": "2026-06-20",
+    "description": "Con Edison Electric",
+    "category": "Utilities",
+    "amount": -125.93,
+    "balanceAfter": -1299.16
+  },
+  {
+    "id": "acc-1003-tx-4",
+    "accountId": "acc-1003",
+    "date": "2026-06-19",
+    "description": "Amazon.com",
+    "category": "Shopping",
+    "amount": -176.33,
+    "balanceAfter": -1173.23
+  },
+  {
+    "id": "acc-1003-tx-3",
+    "accountId": "acc-1003",
+    "date": "2026-06-17",
+    "description": "Delta Air Lines",
+    "category": "Travel",
+    "amount": -20.78,
+    "balanceAfter": -996.9
+  },
+  {
+    "id": "acc-1003-tx-2",
+    "accountId": "acc-1003",
+    "date": "2026-06-17",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -184.98,
+    "balanceAfter": -976.12
+  },
+  {
+    "id": "acc-1003-tx-1",
+    "accountId": "acc-1003",
+    "date": "2026-06-16",
+    "description": "Whole Foods Market",
+    "category": "Groceries",
+    "amount": -48.98,
+    "balanceAfter": -791.14
+  }
+]

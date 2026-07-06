@@ -1,0 +1,42 @@
+@defer (on idle) {
+  <section aria-labelledby="net-worth-heading" class="net-worth">
+    <h3 id="net-worth-heading">Net Worth</h3>
+    @if (netWorth() === undefined) {
+      <p>Calculating…</p>
+    } @else if (netWorth() === null) {
+      <p role="alert">Could not calculate net worth.</p>
+    } @else {
+      <p class="net-worth__amount">{{ netWorth() | currency }}</p>
+    }
+  </section>
+} @placeholder {
+  <section class="net-worth net-worth--placeholder" aria-hidden="true"></section>
+}
+
+<section aria-labelledby="accounts-heading">
+  <h2 id="accounts-heading">Accounts</h2>
+
+  @if (accounts() === undefined) {
+    <p role="status">Loading accounts…</p>
+  } @else if (accounts() === null) {
+    <p role="alert">Could not load accounts. Please try again.</p>
+  } @else {
+    <div class="account-cards">
+      @for (account of accounts(); track account.id) {
+        <app-card>
+          <span card-header>
+            <span>{{ account.nickname }}</span>
+            <app-badge [status]="account.status" />
+          </span>
+
+          <p class="account-number">{{ account.accountNumber | maskAccountNumber }}</p>
+          <p class="account-balance">{{ account.balance | currency }}</p>
+
+          <span card-footer>
+            <a [routerLink]="['/accounts', account.id]">View transactions</a>
+          </span>
+        </app-card>
+      }
+    </div>
+  }
+</section>

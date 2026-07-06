@@ -1,0 +1,43 @@
+.net-worth {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e1e5eb;
+  border-radius: 0.5rem;
+  background: #f6f8fa;
+
+  &--placeholder {
+    min-height: 5.5rem;
+  }
+}
+
+.net-worth__amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.account-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+[card-header] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+[card-footer] {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.account-number {
+  color: #57606a;
+}
+
+.account-balance {
+  font-size: 1.25rem;
+  font-weight: 600;
+}

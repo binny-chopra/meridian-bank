@@ -1,0 +1,7 @@
+[
+  { "symbol": "AAPL", "price": 187.42, "changePercent": 0.64, "asOf": "2026-07-06T12:00:00.000Z" },
+  { "symbol": "MSFT", "price": 402.15, "changePercent": -0.21, "asOf": "2026-07-06T12:00:00.000Z" },
+  { "symbol": "VTI", "price": 251.88, "changePercent": 0.12, "asOf": "2026-07-06T12:00:00.000Z" },
+  { "symbol": "BND", "price": 71.94, "changePercent": -0.05, "asOf": "2026-07-06T12:00:00.000Z" },
+  { "symbol": "NVDA", "price": 468.33, "changePercent": 2.14, "asOf": "2026-07-06T12:00:00.000Z" }
+]

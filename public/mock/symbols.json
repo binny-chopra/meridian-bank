@@ -1,0 +1,20 @@
+[
+  { "symbol": "AAPL", "name": "Apple Inc." },
+  { "symbol": "MSFT", "name": "Microsoft Corp." },
+  { "symbol": "VTI", "name": "Vanguard Total Stock Market ETF" },
+  { "symbol": "BND", "name": "Vanguard Total Bond Market ETF" },
+  { "symbol": "NVDA", "name": "NVIDIA Corp." },
+  { "symbol": "GOOGL", "name": "Alphabet Inc." },
+  { "symbol": "AMZN", "name": "Amazon.com Inc." },
+  { "symbol": "TSLA", "name": "Tesla Inc." },
+  { "symbol": "META", "name": "Meta Platforms Inc." },
+  { "symbol": "JPM", "name": "JPMorgan Chase & Co." },
+  { "symbol": "V", "name": "Visa Inc." },
+  { "symbol": "JNJ", "name": "Johnson & Johnson" },
+  { "symbol": "XOM", "name": "Exxon Mobil Corp." },
+  { "symbol": "PG", "name": "Procter & Gamble Co." },
+  { "symbol": "KO", "name": "Coca-Cola Co." },
+  { "symbol": "DIS", "name": "Walt Disney Co." },
+  { "symbol": "NFLX", "name": "Netflix Inc." },
+  { "symbol": "SPY", "name": "SPDR S&P 500 ETF Trust" }
+]

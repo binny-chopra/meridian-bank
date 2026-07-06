@@ -1,0 +1,7 @@
+[
+  { "symbol": "AAPL", "name": "Apple Inc.", "shares": 25, "costBasis": 148.32 },
+  { "symbol": "MSFT", "name": "Microsoft Corp.", "shares": 15, "costBasis": 289.1 },
+  { "symbol": "VTI", "name": "Vanguard Total Stock Market ETF", "shares": 40, "costBasis": 205.44 },
+  { "symbol": "BND", "name": "Vanguard Total Bond Market ETF", "shares": 60, "costBasis": 72.18 },
+  { "symbol": "NVDA", "name": "NVIDIA Corp.", "shares": 10, "costBasis": 412.67 }
+]

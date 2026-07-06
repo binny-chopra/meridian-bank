@@ -1,0 +1,29 @@
+[
+  {
+    "id": "acc-1001",
+    "nickname": "Everyday Checking",
+    "type": "checking",
+    "accountNumber": "4532015112830366",
+    "balance": 8068.62,
+    "currency": "USD",
+    "status": "active"
+  },
+  {
+    "id": "acc-1002",
+    "nickname": "High-Yield Savings",
+    "type": "savings",
+    "accountNumber": "4532019982211004",
+    "balance": 23921.34,
+    "currency": "USD",
+    "status": "active"
+  },
+  {
+    "id": "acc-1003",
+    "nickname": "Rewards Credit Card",
+    "type": "credit",
+    "accountNumber": "4532004421119087",
+    "balance": -2658.99,
+    "currency": "USD",
+    "status": "pending"
+  }
+]

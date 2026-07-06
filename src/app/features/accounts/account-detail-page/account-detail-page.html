@@ -1,0 +1,54 @@
+<a routerLink="/accounts" class="back-link">← Back to Accounts</a>
+
+@if (transactions() === undefined) {
+  <p role="status">Loading transactions…</p>
+} @else if (transactions() === null) {
+  <p role="alert">Could not load transactions. Please try again.</p>
+} @else {
+  <header class="detail-header">
+    <h2>Transactions</h2>
+    <input
+      type="search"
+      class="filter-input"
+      aria-label="Filter transactions"
+      placeholder="Search by description or category"
+      [value]="filterText()"
+      (input)="filterText.set($any($event.target).value)"
+    />
+  </header>
+
+  <div class="transactions" role="table" aria-label="Transactions">
+    <div class="transactions__row transactions__row--header" role="row">
+      <span role="columnheader" [attr.aria-sort]="ariaSortFor('date')">
+        <button type="button" (click)="setSort('date')">Date</button>
+      </span>
+      <span role="columnheader" [attr.aria-sort]="ariaSortFor('description')">
+        <button type="button" (click)="setSort('description')">Description</button>
+      </span>
+      <span role="columnheader" class="numeric" [attr.aria-sort]="ariaSortFor('amount')">
+        <button type="button" (click)="setSort('amount')">Amount</button>
+      </span>
+    </div>
+
+    @defer (on viewport) {
+      <cdk-virtual-scroll-viewport itemSize="52" class="transactions__viewport">
+        <div
+          class="transactions__row"
+          role="row"
+          *cdkVirtualFor="let transaction of visibleTransactions(); trackBy: trackByTransactionId"
+        >
+          <span role="cell">{{ transaction.date }}</span>
+          <span role="cell" class="description-cell">
+            <span>{{ transaction.description }}</span>
+            <small class="category">{{ transaction.category }}</small>
+          </span>
+          <span role="cell" class="numeric" [class.is-credit]="transaction.amount > 0">
+            {{ transaction.amount | currency }}
+          </span>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    } @placeholder {
+      <div class="transactions__placeholder" aria-hidden="true">Preparing transaction list…</div>
+    }
+  </div>
+}
