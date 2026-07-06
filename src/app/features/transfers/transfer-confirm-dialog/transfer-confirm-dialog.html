@@ -1,0 +1,34 @@
+<div class="overlay" (keydown)="onKeydown($event)">
+  <div #dialog class="dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-dialog-heading">
+    <h2 id="confirm-dialog-heading">Confirm Transfer</h2>
+
+    <dl class="summary">
+      <dt>From</dt>
+      <dd>
+        {{ fromAccount()?.nickname }} —
+        {{ fromAccount()?.accountNumber | maskAccountNumber }}
+      </dd>
+
+      <dt>To</dt>
+      <dd>
+        {{ toAccount()?.nickname }} —
+        {{ toAccount()?.accountNumber | maskAccountNumber }}
+      </dd>
+
+      <dt>Amount</dt>
+      <dd>{{ amount() | currency }}</dd>
+
+      @if (memo()) {
+        <dt>Memo</dt>
+        <dd>{{ memo() }}</dd>
+      }
+    </dl>
+
+    <div class="actions">
+      <button type="button" (click)="cancelled.emit()">Cancel</button>
+      <button type="button" appAutoFocus [disabled]="pending()" (click)="confirmed.emit()">
+        {{ pending() ? 'Submitting…' : 'Confirm' }}
+      </button>
+    </div>
+  </div>
+</div>

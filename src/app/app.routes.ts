@@ -26,6 +26,11 @@ export const routes: Routes = [
       import('./features/wealth/wealth-page/wealth-page').then((m) => m.WealthPage),
   },
   {
+    path: 'transfers',
+    loadComponent: () =>
+      import('./features/transfers/transfers-page/transfers-page').then((m) => m.TransfersPage),
+  },
+  {
     path: 'ui-kit',
     loadComponent: () => import('./features/ui-kit-demo/ui-kit-demo').then((m) => m.UiKitDemo),
   },

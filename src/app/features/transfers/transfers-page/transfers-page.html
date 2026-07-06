@@ -1,0 +1,74 @@
+<h2>Transfer Money</h2>
+
+<form [formGroup]="transferForm" (ngSubmit)="reviewTransfer()" novalidate>
+  <div class="field">
+    <app-masked-account-select
+      label="From account"
+      formControlName="fromAccountId"
+      [accounts]="accounts()"
+    />
+  </div>
+
+  <div class="field">
+    <app-masked-account-select label="To account" formControlName="toAccountId" [accounts]="accounts()" />
+
+    @if (transferForm.controls.toAccountId.pending) {
+      <p class="hint">Checking account eligibility…</p>
+    } @else if (
+      transferForm.controls.toAccountId.touched &&
+      transferForm.controls.toAccountId.errors?.['inactiveAccount']
+    ) {
+      <p class="error" role="alert">This account can't receive transfers right now.</p>
+    }
+  </div>
+
+  <div class="field">
+    <label for="amount">Amount</label>
+    <input
+      id="amount"
+      type="number"
+      step="0.01"
+      formControlName="amount"
+      [attr.aria-invalid]="transferForm.controls.amount.invalid && transferForm.controls.amount.touched"
+      aria-describedby="amount-error"
+    />
+    @if (transferForm.controls.amount.touched && transferForm.controls.amount.errors?.['min']) {
+      <p id="amount-error" class="error" role="alert">Enter an amount greater than $0.</p>
+    }
+  </div>
+
+  @let formErrors = transferForm.errors;
+  @if (transferForm.touched && formErrors?.['sameAccount']) {
+    <p class="error" role="alert">Choose two different accounts.</p>
+  } @else if (transferForm.touched && formErrors?.['insufficientFunds']) {
+    <p class="error" role="alert">The from account doesn't have enough available balance.</p>
+  }
+
+  <div class="field">
+    <label for="memo">Memo (optional)</label>
+    <textarea id="memo" formControlName="memo" rows="2"></textarea>
+    @if (transferForm.controls.memo.errors?.['maxlength']) {
+      <p class="error" role="alert">Memo is too long.</p>
+    }
+  </div>
+
+  <button #submitButton type="submit" [disabled]="transferForm.pending">Review transfer</button>
+
+  @if (submitState() === 'success') {
+    <p role="status">Transfer complete. Confirmation {{ confirmationId() }}.</p>
+  } @else if (submitState() === 'error') {
+    <p role="alert">Something went wrong submitting the transfer. Please try again.</p>
+  }
+</form>
+
+@if (showConfirmDialog()) {
+  <app-transfer-confirm-dialog
+    [fromAccount]="fromAccount()"
+    [toAccount]="toAccount()"
+    [amount]="transferForm.controls.amount.value"
+    [memo]="transferForm.controls.memo.value"
+    [pending]="submitState() === 'submitting'"
+    (confirmed)="confirmTransfer()"
+    (cancelled)="cancelConfirm()"
+  />
+}

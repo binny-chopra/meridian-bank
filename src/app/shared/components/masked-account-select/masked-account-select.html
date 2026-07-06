@@ -1,0 +1,15 @@
+<label [for]="selectId">{{ label() }}</label>
+<select
+  [id]="selectId"
+  [disabled]="disabled()"
+  [value]="value()"
+  (change)="onSelect($any($event.target).value)"
+  (blur)="onBlur()"
+>
+  <option value="" disabled>Select an account</option>
+  @for (account of accounts(); track account.id) {
+    <option [value]="account.id">
+      {{ account.nickname }} — {{ account.accountNumber | maskAccountNumber }}
+    </option>
+  }
+</select>
