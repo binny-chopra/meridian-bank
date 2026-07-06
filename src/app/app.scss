@@ -20,12 +20,19 @@ h1 {
   margin: 0;
 }
 
-nav {
+.topbar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #e1e5eb;
   padding-bottom: 0.75rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
 
   a {
     color: #57606a;
@@ -35,6 +42,30 @@ nav {
     &.is-active {
       color: #0b5fff;
     }
+
+    &:focus-visible {
+      outline: 2px solid #0b5fff;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #57606a;
+  white-space: nowrap;
+
+  button {
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #c7cdd6;
+    border-radius: 0.375rem;
+    background: transparent;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
 
     &:focus-visible {
       outline: 2px solid #0b5fff;

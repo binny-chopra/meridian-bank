@@ -1,6 +1,6 @@
 import { Directive, TemplateRef, ViewContainerRef, effect, inject, input } from '@angular/core';
 
-export type UserRole = 'customer' | 'advisor';
+import { UserRole } from '../../core/models/auth-user';
 
 @Directive({
   selector: '[appHasRole]',
