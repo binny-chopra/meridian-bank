@@ -7,13 +7,14 @@
   border-radius: 0.5rem;
   padding: 1rem;
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
-}
 
-// The Highlightable host directive toggles a class on the <app-card> host
-// element itself, not on .card below, so :host(...) is what lets the two meet.
-:host(.is-highlighted) .card {
-  border-color: #0b5fff;
-  box-shadow: 0 4px 12px rgba(11, 95, 255, 0.15);
+  // :focus-within covers keyboard focus landing on anything inside the card
+  // (the toggle, a button) — no JS needed for either hover or focus parity.
+  &:hover,
+  &:focus-within {
+    border-color: #0b5fff;
+    box-shadow: 0 4px 12px rgba(11, 95, 255, 0.15);
+  }
 }
 
 .card__header {

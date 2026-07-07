@@ -12,7 +12,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'danger';
 export class Button {
   readonly variant = input<ButtonVariant>('primary');
   readonly type = input<'button' | 'submit'>('button');
-  readonly disabled = input(false);
+  readonly disabled = input<boolean>(false);
 
   readonly clicked = output<void>();
 

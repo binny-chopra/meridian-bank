@@ -55,7 +55,12 @@
   <button #submitButton type="submit" [disabled]="transferForm.pending">Review transfer</button>
 
   @if (submitState() === 'success') {
-    <p role="status">Transfer complete. Confirmation {{ confirmationId() }}.</p>
+    <p role="status">
+      Transfer complete. Confirmation
+      @if (confirmationId(); as id) {
+        <app-copyable-value [value]="id" />
+      }
+    </p>
   } @else if (submitState() === 'error') {
     <p role="alert">Something went wrong submitting the transfer. Please try again.</p>
   }

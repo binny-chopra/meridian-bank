@@ -10,6 +10,6 @@ export class MaskAccountNumberPipe implements PipeTransform {
     }
 
     const visible = accountNumber.slice(-visibleDigits);
-    return `••••${visible}`;
+    return `••••••••${visible}`;
   }
 }

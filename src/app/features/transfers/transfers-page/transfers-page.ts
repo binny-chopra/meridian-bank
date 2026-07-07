@@ -4,6 +4,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Subject, catchError, exhaustMap, of } from 'rxjs';
 
 import { MAX_MEMO_LENGTH, MIN_TRANSFER_AMOUNT } from '../../../core/constants/transfers.constants';
+import { CopyableValue } from '../../../shared/components/copyable-value/copyable-value';
 import { MaskedAccountSelect } from '../../../shared/components/masked-account-select/masked-account-select';
 import { AccountsApi } from '../../accounts/accounts-api';
 import { accountActiveValidator, sameAccountValidator, sufficientFundsValidator } from '../account-validators';
@@ -14,7 +15,7 @@ type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 @Component({
   selector: 'app-transfers-page',
-  imports: [ReactiveFormsModule, MaskedAccountSelect, TransferConfirmDialog],
+  imports: [ReactiveFormsModule, MaskedAccountSelect, TransferConfirmDialog, CopyableValue],
   templateUrl: './transfers-page.html',
   styleUrl: './transfers-page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

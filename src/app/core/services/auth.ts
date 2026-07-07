@@ -1,7 +1,11 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { Observable, delay, map, of, throwError } from 'rxjs';
+import { Observable, Subject, delay, map, of, throwError } from 'rxjs';
 
-import { AUTH_USER_STORAGE_KEY, LOGIN_SIMULATED_DELAY_MS } from '../constants/auth.constants';
+import {
+  AUTH_USER_STORAGE_KEY,
+  LOGIN_SIMULATED_DELAY_MS,
+  TX_FILTER_STORAGE_KEY,
+} from '../constants/auth.constants';
 import { AuthUser } from '../models/auth-user';
 import { TokenStore } from './token-store';
 
@@ -27,6 +31,13 @@ export class Auth {
   private readonly _currentUser = signal<AuthUser | null>(null);
   readonly currentUser = this._currentUser.asReadonly();
   readonly isAuthenticated = computed(() => this.currentUser() !== null);
+
+  // Extension point for per-user local state that isn't auth's business to
+  // know the internals of (e.g. WatchlistStore's symbols) — those services
+  // depend on Auth to find out when to clear themselves, rather than Auth
+  // reaching into every feature that happens to keep session-scoped state.
+  private readonly _loggedOut = new Subject<void>();
+  readonly loggedOut$ = this._loggedOut.asObservable();
 
   constructor() {
     const restored = this.restoreUser();
@@ -62,6 +73,10 @@ export class Auth {
     this._currentUser.set(null);
     this.tokenStore.setToken(null);
     sessionStorage.removeItem(AUTH_USER_STORAGE_KEY);
+    // No owning service instance is guaranteed to be alive right now for this
+    // one, so it's cleared directly rather than through loggedOut$.
+    sessionStorage.removeItem(TX_FILTER_STORAGE_KEY);
+    this._loggedOut.next();
   }
 
   private restoreUser(): AuthUser | null {

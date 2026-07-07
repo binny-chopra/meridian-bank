@@ -5,13 +5,12 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
 import { catchError, of, switchMap } from 'rxjs';
 
+import { TX_FILTER_STORAGE_KEY } from '../../../core/constants/auth.constants';
 import { Transaction } from '../../../core/models/transaction';
 import { AccountsApi } from '../accounts-api';
 
 type SortColumn = 'date' | 'description' | 'amount';
 type SortDirection = 'asc' | 'desc';
-
-const FILTER_STORAGE_KEY = 'meridian:tx-filter';
 
 @Component({
   selector: 'app-account-detail-page',
@@ -36,7 +35,7 @@ export class AccountDetailPage {
     { initialValue: undefined },
   );
 
-  protected readonly filterText = signal(sessionStorage.getItem(FILTER_STORAGE_KEY) ?? '');
+  protected readonly filterText = signal(sessionStorage.getItem(TX_FILTER_STORAGE_KEY) ?? '');
   protected readonly sortColumn = signal<SortColumn>('date');
   protected readonly sortDirection = signal<SortDirection>('desc');
 
@@ -61,7 +60,7 @@ export class AccountDetailPage {
     // A real side effect (talking to sessionStorage), not derived state —
     // that's why this is an effect() and not folded into the computed above.
     effect(() => {
-      sessionStorage.setItem(FILTER_STORAGE_KEY, this.filterText());
+      sessionStorage.setItem(TX_FILTER_STORAGE_KEY, this.filterText());
     });
   }
 

@@ -1,0 +1,58 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.value {
+  font-weight: 600;
+}
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #57606a;
+  cursor: pointer;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background: #f1f4f9;
+    color: #0b5fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #0b5fff;
+    outline-offset: 2px;
+  }
+
+  // The directive's [class.copied] binding lands right on this button — no
+  // component-host boundary to cross here, so a plain class selector works.
+  &.copied {
+    color: #1a7f3c;
+  }
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-check {
+  display: none;
+}
+
+.copy-button.copied {
+  .icon-copy {
+    display: none;
+  }
+
+  .icon-check {
+    display: block;
+  }
+}
