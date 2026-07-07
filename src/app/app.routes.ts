@@ -44,6 +44,11 @@ export const routes: Routes = [
       import('./features/transfers/transfers-page/transfers-page').then((m) => m.TransfersPage),
   },
   {
+    path: 'demo',
+    canActivate: [authGuard],
+    loadComponent: () => import('./features/demo/demo').then((m) => m.Demo),
+  },
+  {
     path: 'ui-kit',
     canActivate: [authGuard],
     loadComponent: () => import('./features/ui-kit-demo/ui-kit-demo').then((m) => m.UiKitDemo),

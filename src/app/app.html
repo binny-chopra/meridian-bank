@@ -5,26 +5,24 @@
   </div>
 
   @if (auth.isAuthenticated()) {
-    <div class="topbar">
-      <nav aria-label="Primary">
-        <a routerLink="/accounts" routerLinkActive="is-active">Accounts</a>
-        <a routerLink="/wealth" routerLinkActive="is-active">Wealth</a>
-        <a routerLink="/transfers" routerLinkActive="is-active">Transfers</a>
-        <a routerLink="/ui-kit" routerLinkActive="is-active">UI Kit</a>
-        <a
-          *appHasRole="['advisor']; user: auth.currentUser()?.role"
-          routerLink="/user-activity"
-          routerLinkActive="is-active"
-        >
-          User Activity
-        </a>
-      </nav>
+  <div class="topbar">
+    <nav aria-label="Primary">
+      <a routerLink="/accounts" routerLinkActive="is-active">Accounts</a>
+      <a routerLink="/wealth" routerLinkActive="is-active">Wealth</a>
+      <a routerLink="/transfers" routerLinkActive="is-active">Transfers</a>
+      <a routerLink="/ui-kit" routerLinkActive="is-active">UI Kit</a>
+      <a *appHasRole="['advisor']; user: auth.currentUser()?.role" routerLink="/user-activity"
+        routerLinkActive="is-active">
+        User Activity
+      </a>
+      <a routerLink="/demo" routerLinkActive="is-active">Demo</a>
+    </nav>
 
-      <div class="account">
-        <span>{{ auth.currentUser()?.name }}</span>
-        <button type="button" (click)="logout()">Log out</button>
-      </div>
+    <div class="account">
+      <span>{{ auth.currentUser()?.name }}</span>
+      <button type="button" (click)="logout()">Log out</button>
     </div>
+  </div>
   }
 
   <router-outlet />
